@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-
 @Getter
 @Setter
 @Entity
@@ -29,11 +28,12 @@ public class Accommodation {
 
     @Column(name = "bedrooms")
     private Short bedrooms;
-/*
+
     @OneToOne
+    @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Address address;
 
-    @OneToOne
+/*    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "additional_characteristics_id", referencedColumnName = "id")
     private AdditionalCharacteristics additionalCharacteristics;*/
-
 }
