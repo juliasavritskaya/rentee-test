@@ -2,7 +2,6 @@ package com.mnkqn.rentee.domain.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-
 import javax.persistence.*;
 @Getter
 @Setter
@@ -33,7 +32,7 @@ public class Accommodation {
     @JoinColumn(name = "address_id", referencedColumnName = "id")
     private Address address;
 
-/*    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "additional_characteristics_id", referencedColumnName = "id")
-    private AdditionalCharacteristics additionalCharacteristics;*/
+    private AdditionalCharacteristics additionalCharacteristics;
 }
